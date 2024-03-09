@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "d5d85a97-7ebc-41c7-9588-00002f789803",
+		"name": "Dazn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14139352",
+		"_collection_link": "https://dark-sunset-957371.postman.co/workspace/My-Workspace~9a1d3d25-7298-44dd-80e0-0562aabbbb32/collection/14139352-d5d85a97-7ebc-41c7-9588-00002f789803?source=collection_link"
+	},
+	"item": [
+		{
+			"name": "get movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8000/movies"
+			},
+			"response": []
+		},
+		{
+			"name": "add movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"movie-2\",\r\n    \"genre\": [\"romance\"],\r\n    \"rating\": 4.4,\r\n    \"streamingLink\": \"url-1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/movies"
+			},
+			"response": []
+		},
+		{
+			"name": "update movie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"movie-1_updated\",\r\n    \"genre\": [\"action\", \"thriller\", \"romance\"],\r\n    \"rating\": 4.5,\r\n    \"streamingLink\": \"url-1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/movies/65ec1f8b89f11dd34fa25828"
+			},
+			"response": []
+		},
+		{
+			"name": "delete movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8000/movies/65ec1c5eeaf143de79b575f2"
+			},
+			"response": []
+		},
+		{
+			"name": "search movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/movies/search?title=movie&genre=romance",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"movies",
+						"search"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "movie"
+						},
+						{
+							"key": "genre",
+							"value": "romance"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
